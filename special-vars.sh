@@ -29,3 +29,5 @@ echo "The sleep process in background is running under this pid: $!"
 echo "This is the line number in the script: $LINENO"
 
 echo "This is the status code for previous command execution: $?"
+
+echo "Total time in seconds for running this script: $SECONDS"
