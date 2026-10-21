@@ -15,7 +15,7 @@ fi
 
 echo "Proceeding to download nginx"
 
-dnf install nginxx -y
+dnf install nginx -y
 
 if (($? != 0)); then
 echo "Nginx installation failed"
@@ -24,7 +24,7 @@ else
 echo "Nginx downloaded successfully"
 fi
 
-dnf install mysqll -y
+dnf install mysql -y
 
 if (($? != 0)); then
 echo "MySQL installation failed"
