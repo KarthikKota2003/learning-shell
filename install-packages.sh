@@ -6,6 +6,7 @@ user_id=$(id -u)
 
 if (($user_id != 0)); then
 echo "User is not root user, try with user having sudo access"
+exit 1
 else
 echo "User is root user, proceeding to download packages..."
 fi
