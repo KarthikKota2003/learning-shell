@@ -35,3 +35,5 @@ echo "$(($count_string+1))"
 phones=("Iphone" "Samsung" "Nokia")
 
 echo "All the phones available are: ${phones[@]}"
+
+echo "Second phone is ${phones[1]}"
