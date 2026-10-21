@@ -27,3 +27,7 @@ count_string=5
 echo "$count_int+1"
 
 echo "$count_string+1"
+
+echo "$(($count_int+1))"
+
+echo "$(($count_string+1))"
