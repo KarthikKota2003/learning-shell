@@ -15,3 +15,11 @@ echo "The script is running under this user: $USER"
 echo "This script is being run under this path: $PWD"
 
 echo "This is the user's home directory: $HOME"
+
+echo "The script is being run under this pid: $$"
+
+echo "We are going to sleep in background..."
+
+sleep 10 &
+
+echo "The sleep process in background is running under this pid: $!"
