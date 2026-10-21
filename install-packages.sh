@@ -16,3 +16,19 @@ fi
 echo "Proceeding to download nginx"
 
 dnf install nginxx -y
+
+if (($? != 0)); then
+echo "Nginx installation failed"
+exit 1
+else
+echo "Nginx downloaded successfully"
+fi
+
+dnf install mysqll -y
+
+if (($? != 0)); then
+echo "MySQL installation failed"
+exit 1
+else
+echo "MySQL downloaded successfully"
+fi
