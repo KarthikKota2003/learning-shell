@@ -13,3 +13,5 @@ echo "The Absolute path for this script: $(realpath $0)"
 echo "The script is running under this user: $USER"
 
 echo "This script is being run under this path: $PWD"
+
+echo "This is the user's home directory: $HOME"
