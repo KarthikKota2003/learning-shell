@@ -10,3 +10,8 @@ echo "$var1+$var2"
 #This will perform the actual addition
 
 echo "$(($var1+$var2))"
+
+var3="Kota"
+
+#Adding string to number. Returns same result as last operation as string is treated as zero in arithmetic terms
+echo "$(($var1+$var2))+$var3"
