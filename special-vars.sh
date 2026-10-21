@@ -9,3 +9,5 @@ echo "Second arg passed to script is: $2"
 
 echo "The name of this script is: $0"
 echo "The Absolute path for this script: $(realpath $0)"
+
+echo "The script is running under this user: $USER"
