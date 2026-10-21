@@ -18,3 +18,12 @@ echo "$(($var1+$var2+$var3))"
 
 #This is same as concatenating number to string. Result is 30+Kota
 echo "$(($var1+$var2))+$var3"
+
+#declaring variable type explicitly
+declare -i count_int=5
+
+count_string=5
+
+echo "$count_int+1"
+
+echo "$count_string+1"
