@@ -9,6 +9,8 @@ log_file=${logs_folder}/output.log
 
 mkdir -p ${logs_folder}
 
+echo "Script execution started at: $(date +"%Y-%m-%d %H:%M:%S")" | tee -a $log_file
+
 user_id=$(id -u)
 
 if (($user_id != 0)); then
@@ -41,3 +43,5 @@ dnf install mysqll -y &>> log_file
 
 #Calling validate function
 validate $? "Mysql installation"
+
+echo "Script execution completed at: $(date +"%Y-%m-%d %H:%M:%S")" | tee -a $log_file
