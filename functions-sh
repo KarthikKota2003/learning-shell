@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#Here we are trying to install nginx and mysql packages through shell scripting
+
+user_id=$(id -u)
+
+if (($user_id != 0)); then
+echo "User is not root user, try with user having sudo access"
+exit 1
+else
+echo "User is root user, proceeding to download packages..."
+fi
+
+# Function to validate if a package is installed or not
+validate(){
+    if (($1 != 0)); then
+        echo "$2 is failed:"
+    else
+        echo "$2 is success"
+    fi
+}
+
+# Placing dummy packages names here to check non-exiting nature of shell script
+
+echo "Proceeding to download nginx"
+
+dnf install nginx -y
+
+#Calling validate function
+validate $? "Nginx installation"
+
+dnf install mysql -y
+
+#Calling validate function
+validate $? "Mysql installation"
