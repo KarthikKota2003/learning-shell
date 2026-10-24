@@ -43,7 +43,7 @@ validate(){
 for package in $@
 do 
     #Check if the package exists, if not only then install it
-    dnf list installed $package
+    dnf list installed $package &>> $log_file
     if (($? == 0)); then
         echo "$package already exists..."
     else
