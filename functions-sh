@@ -15,7 +15,7 @@ fi
 validate(){
     if (($1 != 0)); then
         echo "$2 is failed"
-        exit 1
+        exit 1 # this will stop the whole script execution at the first failed package installation
     else
         echo "$2 is success"
     fi
