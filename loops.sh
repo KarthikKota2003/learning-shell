@@ -42,10 +42,16 @@ validate(){
 
 for package in $@
 do 
-    echo "Proceeding to download $package"
-    dnf install $package -y &>> $log_file
-    #Calling validate function
-    validate $? "$package installation"
+    #Check if the package exists, if not only then install it
+    dnf list installed $package
+    if (($? == 0)); then
+        echo "$package already exists..."
+    else
+        echo "Proceeding to download $package"
+        dnf install $package -y &>> $log_file
+        #Calling validate function
+        validate $? "$package installation"
+    fi
 done
 
 echo "Script execution completed at: $(date +"%Y-%m-%d %H:%M:%S")" | tee -a $log_file
