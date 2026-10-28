@@ -21,12 +21,12 @@ fi
 
 files_to_archive=$(find $source_dir -name "*.log" -type f -mtime +$days)
 
-if [ -z $files_to_archive ];then
+if [ -z "$files_to_archive" ];then
     echo "No files to archive"
     exit 0
 fi
 
-while IFS=read -r line
+while IFS= read -r line
 do 
     echo "Going to archive: $line"
 done <<< $files_to_archive
