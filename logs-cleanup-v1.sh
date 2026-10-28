@@ -30,6 +30,6 @@ fi
 while IFS= read -r line
 do 
     echo "We are going to delete this file:$line"
-    rm -f $source_dir/$line
+    rm -f $line
     echo "Successfully deleted: $line"
 done <<< $files_to_delete
