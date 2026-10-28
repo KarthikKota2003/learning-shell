@@ -22,7 +22,7 @@ fi
 
 files_to_delete=$(find $source_dir -name "*.log" -type f -mtime +$days)
 
-if [ -z $files_to_delete ];then
+if [ -z "$files_to_delete" ];then
     echo "No files to delete"
     exit 0
 fi
