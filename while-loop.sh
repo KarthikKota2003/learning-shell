@@ -3,4 +3,4 @@
 while IFS= read -r line
 do
     echo $line
-done < "conditionals.sh"
+done < "hello-world.sh"
