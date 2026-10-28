@@ -5,7 +5,7 @@ dest_dir=$2
 days=${3:-14}
 
 usage(){
-    echo "sh $0 [SOURCE DIRECTORY] [NO.OF DAYS]"
+    echo "sh $0 [SOURCE DIRECTORY] [DESTINATION DIRECTORY] [NO.OF DAYS]"
     exit 1
 }
 
