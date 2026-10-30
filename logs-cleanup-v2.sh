@@ -34,7 +34,7 @@ timestamp=$(date +%F-%H-%M-%S)
 # do 
 #     file_name=$(basename $line)
 #     echo "Going to archive: $line"
-#     tar -czf ${dest_dir}/${file_name}-${timestamp}.tar.gz  $line
+#     tar -czf ${dest_dir}/${file_name}-${timestamp}.tar.gz  $line  
 # done <<< $files_to_archive
 
 # This approach will create a zip folder with all the log files zipped inside it 
@@ -42,3 +42,7 @@ timestamp=$(date +%F-%H-%M-%S)
 tar -czf $dest_dir/logs-$timestamp.tar.gz $files_to_archive
 
 echo "Finished archiving files under $source_dir"
+
+echo "Removing files under $source_dir"
+
+rm -rf $source_dir/*
