@@ -48,7 +48,11 @@ done <<< $files_to_archive
 
 tar -czf $dest_dir/logs-$timestamp.tar.gz $files_to_archive
 
-echo "Finished archiving files under $source_dir"
+if (( $? == 0 ));then
+    echo "Finished archiving files under $source_dir"
+else
+    echo "Error occured in archiving files"
+fi
 
 echo "Removing files under $source_dir"
 
