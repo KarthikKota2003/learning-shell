@@ -30,6 +30,7 @@ timestamp=$(date +%F-%H-%M-%S)
 
 while IFS= read -r line
 do 
+    file_name=$(basename $line)
     echo "Going to archive: $line"
-    tar -czf ${dest_dir}/${line}-${timestamp}.tar.gz  $line
+    tar -czf ${dest_dir}/${file_name}-${timestamp}.tar.gz  $line
 done <<< $files_to_archive
