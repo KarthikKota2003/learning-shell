@@ -26,7 +26,10 @@ if [ -z "$files_to_archive" ];then
     exit 0
 fi
 
+timestamp=$(date +%F-%H-%M-%S)
+
 while IFS= read -r line
 do 
     echo "Going to archive: $line"
+    tar -czf ${dest_dir}/${line}-${timestamp}.tar.gz   $source_dir/$line
 done <<< $files_to_archive
