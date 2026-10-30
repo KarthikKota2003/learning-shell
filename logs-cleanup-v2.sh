@@ -39,6 +39,13 @@ timestamp=$(date +%F-%H-%M-%S)
 
 # This approach will create a zip folder with all the log files zipped inside it 
 
+echo "Following files are going to archived"
+
+while IFS= read -r line
+do 
+    echo "FILE : $line"
+done <<< $files_to_archive
+
 tar -czf $dest_dir/logs-$timestamp.tar.gz $files_to_archive
 
 echo "Finished archiving files under $source_dir"
