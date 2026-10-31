@@ -11,4 +11,6 @@ do
     if (( $usage_percentage > $usage_threshold ));then
         message+="WARNING:: High Disk usage on $partition : ${usage_percentage}%"
     fi
+
+    echo $message
 done <<< $usage
