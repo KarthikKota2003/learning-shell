@@ -10,7 +10,7 @@ do
     usage_percentage=$(echo $line | awk '{print $6}' | cut -d '%' -f1)
     partition=$(echo $line | awk '{print $7}')
     if (( $usage_percentage > $usage_threshold ));then
-        message+="WARNING:: High Disk usage on $partition : ${usage_percentage}%\n"
+        message+="WARNING:: High Disk usage on $partition : ${usage_percentage}%<br>"
     fi
 done <<< $usage
 
