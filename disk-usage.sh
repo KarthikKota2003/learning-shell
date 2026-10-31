@@ -12,5 +12,6 @@ do
         message+="WARNING:: High Disk usage on $partition : ${usage_percentage}%"
     fi
 
-    echo $message
 done <<< $usage
+
+ echo $message
