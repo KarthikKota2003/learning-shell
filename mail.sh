@@ -7,7 +7,7 @@ recipient=$4
 server_ip=$5
 message=$6
 
-body="Hi ${1}, \nWe have $alert_type alert for $server_ip. Please have a look:\n$message\nThanks,\nMonitoring Team"
+body="Hi ${1}, \nWe have $alert_type alert for $server_ip. Please have a look:\n${message}\nThanks,\nMonitoring Team"
 
 {
 echo "To: $recipient"
